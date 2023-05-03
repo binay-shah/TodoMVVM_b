@@ -1,5 +1,6 @@
-package com.example.todomvvm_b;
+package com.example.todomvvm_b.database;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -11,7 +12,7 @@ import java.util.List;
 public interface TodoDao {
 
     @Query("SELECT * FROM todos")
-    List<Todo> getAllTodos();
+    LiveData<List<Todo>> getAllTodos();
 
     @Insert
     void addTodo(Todo todo);

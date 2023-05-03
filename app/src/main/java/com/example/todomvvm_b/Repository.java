@@ -1,7 +1,12 @@
 package com.example.todomvvm_b;
 
 import android.app.Application;
-import android.content.Context;
+
+import androidx.lifecycle.LiveData;
+
+import com.example.todomvvm_b.database.Todo;
+import com.example.todomvvm_b.database.TodoDao;
+import com.example.todomvvm_b.database.TodoDatabase;
 
 import java.util.List;
 
@@ -15,8 +20,7 @@ public class Repository {
         todoDao = database.getTodoDao();
     }
 
-    public List<Todo> getAllTodo(){
-
+    public LiveData<List<Todo>> getAllTodos(){
         return todoDao.getAllTodos();
     }
 

@@ -1,4 +1,4 @@
-package com.example.todomvvm_b;
+package com.example.todomvvm_b.database;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

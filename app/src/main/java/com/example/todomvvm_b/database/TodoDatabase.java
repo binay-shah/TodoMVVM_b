@@ -1,10 +1,9 @@
-package com.example.todomvvm_b;
+package com.example.todomvvm_b.database;
 
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
-import androidx.room.Insert;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
@@ -18,7 +17,7 @@ import java.util.concurrent.Executors;
 @Database(entities = {Todo.class}, version = 1, exportSchema = false)
 public abstract class TodoDatabase extends RoomDatabase {
 
-     abstract TodoDao getTodoDao();
+    public  abstract TodoDao getTodoDao();
 
      public static  TodoDatabase INSTANCE;
 
